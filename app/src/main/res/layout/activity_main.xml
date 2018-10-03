@@ -13,21 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
         android:text="Enter the bill's information below:"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/peopleIcon"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:srcCompat="@android:drawable/sym_def_app_icon"
-        tools:layout_editor_absoluteY="63dp" />
 
     <TextView
         android:id="@+id/peopleView"
@@ -35,8 +24,8 @@
         android:layout_height="wrap_content"
         android:text="Number of People:"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/peopleIcon"
-        app:layout_constraintTop_toTopOf="@+id/peopleIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
         tools:layout_editor_absoluteX="78dp" />
 
     <EditText
@@ -47,15 +36,8 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/peopleView"
         app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toTopOf="@+id/peopleView" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:srcCompat="@android:drawable/ic_btn_speak_now"
-        tools:layout_editor_absoluteY="148dp" />
+        app:layout_constraintTop_toTopOf="@+id/peopleView"
+        app:layout_constraintVertical_bias="0.434" />
 
     <TextView
         android:id="@+id/tipView"
@@ -63,9 +45,9 @@
         android:layout_height="wrap_content"
         android:text="Tip %"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/peopleView"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     <EditText
         android:id="@+id/editText2"
@@ -75,15 +57,8 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/tipView"
         app:layout_constraintEnd_toEndOf="@+id/editText3"
-        app:layout_constraintTop_toTopOf="@+id/tipView" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        app:layout_constraintStart_toStartOf="@+id/resetBtn"
-        app:srcCompat="@android:drawable/ic_menu_camera"
-        tools:layout_editor_absoluteY="231dp" />
+        app:layout_constraintTop_toTopOf="@+id/tipView"
+        app:layout_constraintVertical_bias="0.608" />
 
     <TextView
         android:id="@+id/billTotalView"
@@ -91,20 +66,20 @@
         android:layout_height="wrap_content"
         android:text="Bill Total:"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/tipView"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.631" />
+        tools:layout_editor_absoluteY="244dp" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="116dp"
         android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/billTotalView"
         app:layout_constraintEnd_toEndOf="@+id/calcBtn"
-        app:layout_constraintTop_toTopOf="@+id/billTotalView" />
+        app:layout_constraintTop_toTopOf="@+id/billTotalView"
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
         android:id="@+id/calcBtn"
@@ -119,7 +94,7 @@
         android:layout_width="116"
         android:layout_height="56dp"
         android:text="Reset"
-        app:layout_constraintStart_toStartOf="@+id/msgView"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
         tools:layout_editor_absoluteY="300dp" />
 
     <EditText
@@ -127,13 +102,36 @@
         android:layout_width="355dp"
         android:layout_height="120dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="text"
-        android:singleLine="false"
+        android:singleLine="true"
         android:text=" "
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/resetBtn" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:srcCompat="@mipmap/ic_launcher_foreground"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="44"
+        android:layout_height="44"
+        app:srcCompat="@mipmap/group"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="44"
+        android:layout_height="44"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:srcCompat="@mipmap/receipt"
+        tools:layout_editor_absoluteY="244dp" />
 </android.support.constraint.ConstraintLayout>
