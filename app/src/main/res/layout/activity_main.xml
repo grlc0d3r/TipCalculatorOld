@@ -11,12 +11,10 @@
         android:id="@+id/heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:text="Enter the bill's information below:"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="8dp" />
 
     <TextView
         android:id="@+id/peopleView"
@@ -24,9 +22,8 @@
         android:layout_height="wrap_content"
         android:text="Number of People:"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        tools:layout_editor_absoluteX="78dp" />
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="80dp" />
 
     <EditText
         android:id="@+id/peopleField"
@@ -34,10 +31,8 @@
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/peopleView"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toTopOf="@+id/peopleView"
-        app:layout_constraintVertical_bias="0.434" />
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="72dp" />
 
     <TextView
         android:id="@+id/tipView"
@@ -45,20 +40,17 @@
         android:layout_height="wrap_content"
         android:text="Tip %"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/peopleView"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="152dp" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="116dp"
+        android:id="@+id/tipField"
+        android:layout_width="111dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/tipView"
-        app:layout_constraintEnd_toEndOf="@+id/editText3"
-        app:layout_constraintTop_toTopOf="@+id/tipView"
-        app:layout_constraintVertical_bias="0.608" />
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="144dp" />
 
     <TextView
         android:id="@+id/billTotalView"
@@ -66,72 +58,78 @@
         android:layout_height="wrap_content"
         android:text="Bill Total:"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tipView"
-        tools:layout_editor_absoluteY="244dp" />
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="209dp" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="116dp"
+        android:id="@+id/billField"
+        android:layout_width="111dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/billTotalView"
-        app:layout_constraintEnd_toEndOf="@+id/calcBtn"
-        app:layout_constraintTop_toTopOf="@+id/billTotalView"
-        app:layout_constraintVertical_bias="0.565" />
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="209dp" />
 
     <Button
         android:id="@+id/calcBtn"
-        android:layout_width="116"
-        android:layout_height="56"
+        android:layout_width="116dp"
+        android:layout_height="56dp"
+        android:onClick="calculate"
         android:text="Calculate"
-        app:layout_constraintEnd_toEndOf="@+id/msgView"
-        tools:layout_editor_absoluteY="300dp" />
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="307dp" />
 
     <Button
         android:id="@+id/resetBtn"
-        android:layout_width="116"
+        android:layout_width="116dp"
         android:layout_height="56dp"
         android:text="Reset"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        tools:layout_editor_absoluteY="300dp" />
-
-    <EditText
-        android:id="@+id/msgView"
-        android:layout_width="355dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="text"
-        android:singleLine="true"
-        android:text=" "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/resetBtn" />
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="307dp" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="44dp"
         android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:srcCompat="@mipmap/ic_launcher_foreground"
-        tools:layout_editor_absoluteY="151dp" />
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="148dp" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="44"
-        android:layout_height="44"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
         app:srcCompat="@mipmap/group"
         tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="66dp" />
+        tools:layout_editor_absoluteY="72dp" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="44"
-        android:layout_height="44"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
         app:srcCompat="@mipmap/receipt"
-        tools:layout_editor_absoluteY="244dp" />
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <TextView
+        android:id="@+id/tipTotalView"
+        android:layout_width="343dp"
+        android:layout_height="33dp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <TextView
+        android:id="@+id/billTotalView"
+        android:layout_width="343dp"
+        android:layout_height="33dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <TextView
+        android:id="@+id/perPersonView"
+        android:layout_width="343dp"
+        android:layout_height="33dp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="470dp" />
+
 </android.support.constraint.ConstraintLayout>
